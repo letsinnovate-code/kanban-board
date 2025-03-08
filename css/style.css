@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container{
+    display: flex;
+    gap: 30px;
+
+}
+.containers{
+    margin-top: 100px;
+    margin-left: 20px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border-radius: 8px;
+    height:70vh;
+    width: 400px;
+    padding: 30px
+}
+.items{
+    padding: 20px;
+    width: 80%;
+    height: 50px;
+    border-radius: 8px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
