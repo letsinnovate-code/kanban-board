@@ -4,6 +4,11 @@ const boardBtn = document.getElementById("board-btn")
 const mainContainer = document.getElementById("main-container")
 const removeTask = document.getElementById("remove-task")
 
+
+
+// addding a task to the todo section
+
+
 todoBtn.addEventListener("click",()=>{
     const task = prompt('Please Add Your Task')
     const todoItem = document.createElement('div')
@@ -23,7 +28,8 @@ todoBtn.addEventListener("click",()=>{
     const removeTask = document.createElement("button")
     // console.log(removeTask);
     removeTask.innerText="Delete"
-    removeTask.setAttribute("id",removeTask)
+    removeTask.id = 'remove-task'
+    removeTask.classList.add("button")
     todoItem.append(removeTask)
     removeTask.addEventListener('click',()=>{
         todoItem.remove()
@@ -35,13 +41,15 @@ todoBtn.addEventListener("click",()=>{
     
     const editTask = document.createElement("button")
     editTask.innerText= "Edit"
-    editTask.setAttribute("id",editTask)
+    editTask.id = 'edit-task'
+    editTask.classList.add("button")
     todoItem.append(editTask)
     editTask.addEventListener('click',()=>{
         para.contentEditable=true
         const doneBtn = document.createElement("button")
-        doneBtn.setAttribute('id',doneBtn)
+        doneBtn.id= 'done-btn'
         doneBtn.innerText = 'Done'
+        doneBtn.classList.add("button")
         todoItem.append(doneBtn)
         doneBtn.addEventListener('click',()=>{
             para.contentEditable=false
@@ -52,6 +60,7 @@ todoBtn.addEventListener("click",()=>{
     
 })
 
+// Creating a new board  using a board button
 boardBtn.addEventListener('click',()=>{
     const newBoardName = prompt("add name of new board")
     const newBoard = document.createElement('div')
@@ -62,14 +71,37 @@ boardBtn.addEventListener('click',()=>{
     mainContainer.appendChild(newBoard)
     // console.log(mainContainer)
 
-    const removeTask = document.createElement("button")
+// adding a remove button to remove board
+
+    const removeBoard = document.createElement("button")
     // console.log(removeTask);
-    removeTask.innerText="Delete"
-    removeTask.setAttribute("id",removeTask)
-    newBoard.append(removeTask)
-    removeTask.addEventListener('click',()=>{
+    removeBoard.innerText="Delete Board"
+    removeBoard.id = 'remove-board'
+    removeBoard.classList.add("button")
+    newBoard.append(removeBoard)
+    removeBoard.addEventListener('click',()=>{
         newBoard.remove()
     })
+
+    const addTask = document.createElement('button')
+    addTask.innerText='Add Task'
+    addTask.id = 'add-task'
+    addTask.classList.add("button")
+    newBoard.append(addTask)
+    addTask.addEventListener('click',()=>{
+        const task = prompt('Please Add Your Task')
+        const todoItem = document.createElement('div')
+        todoItem.classList.add('items')
+        const para = document.createElement('p')
+        para.classList.add('task')
+        para.innerText = task;
+        newBoard.appendChild(para);
+        todoContainer.appendChild(newBoard)
+    
+    })
+
+
+    
 
 
 })
