@@ -17,21 +17,27 @@ body{
     padding-left: 20px;
     background-color: black;
 }
+
 .containers{
-    margin-top: 100px;
+    margin-top: 70px;
     margin-left: 20px;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     border-radius: 8px;
     height:70vh;
     width: 300px;
     padding: 30px
 }
+.task-container{
+    height: 80%;
+    background-color: black;
+}
 .items{
+    display: flex;
     padding: 20px;
-    width: 80%;
+    width: 90%;
     height: 50px;
     border-radius: 8px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 #board-btn{
@@ -41,7 +47,7 @@ body{
     color: white;
     height: 40px;
     width: 100px;
-    margin-top: 100px;
+    margin-top: 70px;
     
 }
 

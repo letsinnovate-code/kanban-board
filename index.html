@@ -1,48 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link rel="stylesheet" href="css/style.css" />
     <title>KanBan Board</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <nav class="navigation-bar">
-        <h2>KanBan Board</h2>
-        
-
+      <h2>KanBan Board</h2>
     </nav>
     <div id="main-container">
+      <div id="todo-container" class="containers">
+        <h1>ToDo</h1>
+        <div id="task-cont" class="task-container"></div>
+        <div id="task-btn"><button class="button" id="todo-btn">Add Task</button></div>
+      </div>
+      <div class="containers">
+        <h1>To Progress</h1>
+        <div class="task-container"></div>
+      </div>
+      <div class="containers">
+        <h1>Done</h1>
+        <div class="task-container"></div>
+        
+      </div>
 
-
-        <div id="todo-container" class="containers">
-            <h1>ToDo</h1>
-            <div id="todo-items" class="items">
-                <p class="task">learn js</p>
-                
-            </div>
-            <button class="button" id="todo-btn">Add Task</button>
-            
-        </div>
-        <div class="containers">
-            <h1>To Progress</h1>
-            <div class="items">
-                <p class="task">learn js</p>
-            </div>
-            <button class="button">Add Task</button>
-        </div>
-        <div class="containers">
-            <h1>Done</h1>
-            <div class="items">
-                <p class="task">learn js</p>
-            </div>
-            <button class="button">Add Task</button>
-        </div>
-
-        <button id="board-btn">new board </button>
+      <button id="board-btn">new board</button>
     </div>
 
     <script src="jsfiles/script.js"></script>
-</body>
+  </body>
 </html>
